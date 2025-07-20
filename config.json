@@ -1,3 +1,8 @@
 {
-  "output_type": "bool"
+  "agent_type": "ExampleAgent",
+  "output_type": "bool",
+  "auto_map": {
+    "AutoConfig": "config.ExampleConfig",
+    "AutoAgent": "model.ExampleAgent"
+  }
 }
