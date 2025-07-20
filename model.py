@@ -1,7 +1,7 @@
 from modaic.precompiled_agent import PrecompiledAgent
 from config import ExampleConfig
 import dspy
-from util import print_hi
+from util import add_hi
 
 class Summarize(dspy.Signature):
     question = dspy.InputField()
@@ -15,6 +15,5 @@ class ExampleAgent(PrecompiledAgent):
         self.predictor = dspy.Predict(Summarize)
         self.predictor.lm = dspy.LM("openai/gpt-4o-mini")
 
-    def forward(self, question: str, context: str) -> str:
-        print_hi(question)
-        return self.predictor(question=question, context=context)
+    def forward(self, question: str, context: str=None) -> str:
+        return add_hi(question)

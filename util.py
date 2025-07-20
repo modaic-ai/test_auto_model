@@ -1,6 +1,6 @@
-def print_hi(name):
-    print(f'Hi, {name}')
+def add_hi(name):
+    return f'Hi, {name}'
 
 
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    print(add_hi('PyCharm'))
